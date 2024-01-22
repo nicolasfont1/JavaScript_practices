@@ -11,7 +11,11 @@
  * @returns {boolean} whether a license is required
  */
 export function needsLicense(kind) {
-  throw new Error('Please implement the needsLicense function');
+  if (kind === 'car' || kind === 'truck') {
+    return true
+  } else {
+    return false
+  }
 }
 
 /**
@@ -23,7 +27,11 @@ export function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 export function chooseVehicle(option1, option2) {
-  throw new Error('Please implement the chooseVehicle function');
+  if (option1 > option2) {
+    return option1
+  } else {
+    return option2
+  }
 }
 
 /**
