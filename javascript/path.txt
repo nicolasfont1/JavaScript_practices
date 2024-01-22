@@ -1,0 +1,1 @@
+exercism submit "C:\Users\nicol\Desktop\Web Dev\Codes\JavaScript_practices\javascript\"
