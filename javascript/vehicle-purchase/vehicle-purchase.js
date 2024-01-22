@@ -27,10 +27,11 @@ export function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 export function chooseVehicle(option1, option2) {
+  const rest = ' is clearly the better choice.'
   if (option1 > option2) {
-    return option1
+    return option2 + rest
   } else {
-    return option2
+    return option1 + rest
   }
 }
 
@@ -43,5 +44,13 @@ export function chooseVehicle(option1, option2) {
  * @returns {number} expected resell price in the dealership
  */
 export function calculateResellPrice(originalPrice, age) {
-  throw new Error('Please implement the calculateResellPrice function');
+  if (age < 3) {
+    return (originalPrice * 80) / 100
+  } else if (age > 10) {
+    return (originalPrice * 50) / 100
+  } else {
+    return (originalPrice * 70) / 100
+  }
 }
+
+// if the vehicle is less than 3 years old, it costs 80% of the original price it had when it was brand new. If it is more than 10 years old, it costs 50%. If the vehicle is at least 3 years old but not older than 10 years, it costs 70% of the original price
